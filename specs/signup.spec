@@ -14,6 +14,8 @@ visit https://plangrid-test.herokuapp.com/:
 		text 'Your password is required.' doesNotExist
 		text 'An account already exists with that email.' doesNotExist
 		text 'Your password needs to be at least 8 characters.' doesNotExist
+		text 'This account has been deactivated.' doesNotExist
+		text 'Something went wrong' doesNotExist
 
 		selector 'input[placeholder="First"]' exists
 		fill 'input[placeholder="First"]' 'Helen'
@@ -31,5 +33,16 @@ visit https://plangrid-test.herokuapp.com/:
 		text 'Your full name is required.' exists
 		fill 'input[placeholder="Last"]' 'Something'
 		text 'Your first name is required.' exists
-
+		fill 'input[placeholder="First"]' 'Helen'
+		fill 'input[placeholder="Minimum 8 characters"]' 'qaz'
+		text 'Your password needs to be at least 8 characters.' exists
+		fill 'input[placeholder="Minimum 8 characters"]' 'qazwsxedc'
+		fill 'input[placeholder="betty@construction.com"]' 'example'
+		text 'You need to enter a valid email.'  exists
+		fill 'input[placeholder="betty@construction.com"]' 'helen@example'
+		fill 'input[placeholder="betty@construction.com"]' 'dead@plangrid.com'
+		click selector 'button.full-width.medium.additive'
+		after selector '.row.alert.error' exists
+		text 'This account has been deactivated.' exists
+				
 		capture png 'signup'
