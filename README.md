@@ -47,7 +47,3 @@ https://plangrid.jiveon.com/docs/DOC-1537
 ### 4 termed functions (rare)
 
 `after selector `.foo` exists`:  Wait for a thing to appear (to exist or be visible)
-
-
-
-
