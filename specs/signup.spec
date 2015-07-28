@@ -21,7 +21,7 @@ visit https://plangrid-test.herokuapp.com/:
 		fill 'input[placeholder="First"]' 'Helen'
 		selector 'input[placeholder="Last"]' exists
 		fill 'input[placeholder="Last"]' 'Thomas'
-		selector 'input[placeholder="betty@construction.com"]' exists 
+		selector 'input[placeholder="betty@construction.com"]' exists
 		fill 'input[placeholder="betty@construction.com"]' 'helen.thomas1234@example.com'
 		selector 'input[placeholder="Minimum 8 characters"]' exists
 		click selector 'button.full-width.medium.additive'
