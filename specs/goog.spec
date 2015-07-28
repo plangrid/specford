@@ -1,4 +1,5 @@
 visit http://google.com:
   query body:
-    text 'Privacy' exists
-    text 'Foo bar baz' doesNotExist
+    click selector 'a._Gs[href="//www.google.com/intl/en/policies/privacy/?fg=1"]'
+    after selector 'a[href="//myaccount.google.com/"]' exists
+    1 '.policy-pdf' exists
